@@ -26,7 +26,10 @@
                 </div>
                 <div class="form-group">
                     <label for="password">Wachtwoord</label>
-                    <input type="password" id="password" name="password" required>
+                    <div class="password-wrapper">
+                        <input type="password" id="password" name="password" required>
+                        <span class="hint-icon" title="Please change default: password.">?</span>
+                    </div>
                 </div>
                 <button type="submit" class="login-btn">Inloggen</button>
                 <p id="login-error">Ongeldige inloggegevens</p>
