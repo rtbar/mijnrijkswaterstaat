@@ -41,5 +41,25 @@ function handleUserSubmission() {
     }, 600);
 }
 
+// Login Logic
+const loginOverlay = document.getElementById('login-overlay');
+const loginForm = document.getElementById('login-form');
+const loginError = document.getElementById('login-error');
+
+loginForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const user = document.getElementById('username').value;
+    const pass = document.getElementById('password').value;
+
+    if (user === 'Maarten' && pass === 'password') {
+        // Success
+        loginOverlay.style.display = 'none';
+        document.title = "SinterClaude v1.0"; // Reveal true title
+    } else {
+        // Error
+        loginError.style.display = 'block';
+    }
+});
+
 // Start the app
 init();
