@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mijn Rijkswaterstaat</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&display=swap"
+        rel="stylesheet">
+  <script type="module" crossorigin src="/sinterklaas_chatbot/assets/index-BDCXVr0r.js"></script>
+  <link rel="stylesheet" crossorigin href="/sinterklaas_chatbot/assets/index-DJPjw7nl.css">
+</head>
+
+<body>
+    <div id="login-overlay">
+        <div class="login-container">
+            <div class="login-header">
+                <h2>Mijn Rijkswaterstaat</h2>
+            </div>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="username">Gebruikersnaam</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Wachtwoord</label>
+                    <div class="password-wrapper">
+                        <input type="password" id="password" name="password" required>
+                        <span class="hint-icon" title="Please change default: password.">?</span>
+                    </div>
+                </div>
+                <button type="submit" class="login-btn">Inloggen</button>
+                <p id="login-error">Ongeldige inloggegevens</p>
+            </form>
+        </div>
+    </div>
+
+    <div id="info-overlay" style="display: none;">
+        <div class="info-container">
+            <div class="info-header">
+                <h2>Belangrijke Informatie</h2>
+            </div>
+            <div class="info-content">
+                <p>Welkom bij het beveiligde portaal van Rijkswaterstaat. Voordat u verdergaat, dient u kennis te nemen
+                    van de volgende richtlijnen:</p>
+                <p>1. Dit systeem is uitsluitend bedoeld voor geautoriseerd personeel. Ongeautoriseerde toegang is
+                    strafbaar.</p>
+                <p>2. Alle activiteiten op dit netwerk worden gemonitord en vastgelegd voor beveiligingsdoeleinden.</p>
+                <p>3. Deel uw inloggegevens nooit met derden. Bij vermoeden van misbruik dient u direct contact op te
+                    nemen met de helpdesk.</p>
+                <p>4. Zorg ervoor dat u uitlogt wanneer u uw werkplek verlaat.</p>
+                <p>Door op 'Verder' te klikken, gaat u akkoord met de gebruiksvoorwaarden en het privacybeleid van
+                    Rijkswaterstaat.</p>
+            </div>
+            <button id="continue-btn" class="login-btn">Verder</button>
+        </div>
+    </div>
+
+    <div id="warning-overlay" style="display: none;">
+        <div class="warning-container">
+            <div class="warning-header">
+                <div class="warning-icon">⚠️</div>
+                <h1>Deceptive site ahead</h1>
+            </div>
+            <p>Attackers on <strong>s1nt3rkl44s@v1ru5.xyz</strong> may trick you into doing something dangerous like
+                installing software or revealing your personal information (for example, passwords, phone numbers, or
+                credit cards).</p>
+
+            <div class="warning-actions">
+                <button id="go-back-btn">Go Back (Safe)</button>
+            </div>
+
+            <div class="advanced-section">
+                <button id="advanced-btn">Advanced</button>
+                <div id="advanced-content" style="display: none;">
+                    <p class="advanced-text">This server could not prove that it is
+                        <strong>s1nt3rkl44s@v1ru5.xyz</strong>; its security certificate is from <strong>Santa's
+                            Workshop</strong>. This may be caused by a misconfiguration or an attacker intercepting your
+                        connection.</p>
+                    <a href="#" id="proceed-link">Proceed to s1nt3rkl44s@v1ru5.xyz (unsafe)</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="snowflakes" aria-hidden="true">
+        <div class="snowflake">🎄</div>
+        <div class="snowflake">🎅</div>
+        <div class="snowflake">🎁</div>
+        <div class="snowflake">🦌</div>
+        <div class="snowflake">⛄</div>
+        <div class="snowflake">🔔</div>
+        <div class="snowflake">🕯️</div>
+        <div class="snowflake">🍪</div>
+        <div class="snowflake">🥛</div>
+        <div class="snowflake">❄️</div>
+    </div>
+    <div id="app">
+        <div class="chat-container">
+            <!-- Header -->
+            <header class="chat-header">
+                <h1>SinterClaude v1.0</h1>
+                <span class="status-dot"></span>
+            </header>
+
+            <!-- Chat Area -->
+            <div id="chat-history" class="chat-history">
+                <!-- Messages will be injected here by JS -->
+            </div>
+
+            <!-- Input Area -->
+            <div class="chat-input-area">
+                <input type="text" id="user-input" placeholder="Type a message..." autocomplete="off" />
+                <button id="send-btn" type="button">
+                    <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="22" y1="2" x2="11" y2="13"></line>
+                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
