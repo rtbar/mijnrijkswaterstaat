@@ -50,6 +50,13 @@ const loginError = document.getElementById('login-error');
 const infoOverlay = document.getElementById('info-overlay');
 const continueBtn = document.getElementById('continue-btn');
 
+// Warning Logic
+const warningOverlay = document.getElementById('warning-overlay');
+const goBackBtn = document.getElementById('go-back-btn');
+const advancedBtn = document.getElementById('advanced-btn');
+const advancedContent = document.getElementById('advanced-content');
+const proceedLink = document.getElementById('proceed-link');
+
 loginForm.addEventListener('submit', (e) => {
     e.preventDefault();
     const user = document.getElementById('username').value;
@@ -67,6 +74,21 @@ loginForm.addEventListener('submit', (e) => {
 
 continueBtn.addEventListener('click', () => {
     infoOverlay.style.display = 'none';
+    warningOverlay.style.display = 'flex'; // Show warning page
+});
+
+goBackBtn.addEventListener('click', () => {
+    location.reload(); // Reload to "safety"
+});
+
+advancedBtn.addEventListener('click', () => {
+    const isHidden = advancedContent.style.display === 'none';
+    advancedContent.style.display = isHidden ? 'block' : 'none';
+});
+
+proceedLink.addEventListener('click', (e) => {
+    e.preventDefault();
+    warningOverlay.style.display = 'none';
     document.title = "SinterClaude v1.0"; // Reveal true title
 });
 

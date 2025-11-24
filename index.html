@@ -28,7 +28,7 @@
                     <label for="password">Wachtwoord</label>
                     <div class="password-wrapper">
                         <input type="password" id="password" name="password" required>
-                        <span class="hint-icon" title="please change default: password">?</span>
+                        <span class="hint-icon" title="Please change default: password.">?</span>
                     </div>
                 </div>
                 <button type="submit" class="login-btn">Inloggen</button>
@@ -55,6 +55,33 @@
                     Rijkswaterstaat.</p>
             </div>
             <button id="continue-btn" class="login-btn">Verder</button>
+        </div>
+    </div>
+
+    <div id="warning-overlay" style="display: none;">
+        <div class="warning-container">
+            <div class="warning-header">
+                <div class="warning-icon">⚠️</div>
+                <h1>Deceptive site ahead</h1>
+            </div>
+            <p>Attackers on <strong>s1nt3rkl44s@v1ru5.xyz</strong> may trick you into doing something dangerous like
+                installing software or revealing your personal information (for example, passwords, phone numbers, or
+                credit cards).</p>
+
+            <div class="warning-actions">
+                <button id="go-back-btn">Go Back (Safe)</button>
+            </div>
+
+            <div class="advanced-section">
+                <button id="advanced-btn">Advanced</button>
+                <div id="advanced-content" style="display: none;">
+                    <p class="advanced-text">This server could not prove that it is
+                        <strong>s1nt3rkl44s@v1ru5.xyz</strong>; its security certificate is from <strong>Santa's
+                            Workshop</strong>. This may be caused by a misconfiguration or an attacker intercepting your
+                        connection.</p>
+                    <a href="#" id="proceed-link">Proceed to s1nt3rkl44s@v1ru5.xyz (unsafe)</a>
+                </div>
+            </div>
         </div>
     </div>
 
