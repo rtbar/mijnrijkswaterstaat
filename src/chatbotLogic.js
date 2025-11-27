@@ -5,31 +5,15 @@
 const RULES = [
     {
         pattern: /^(hi|hello|hey|greetings)/i,
-        response: "Hello there! How can I help you today?",
-    },
-    {
-        pattern: /how are you/i,
-        response: "I am just a computer program, but I'm functioning perfectly! Thanks for asking.",
-    },
-    {
-        pattern: /help|support/i,
-        response: "I can help with: General inquiries, Tech support, or Account questions. Just type what you need!",
-    },
-    {
-        pattern: /price|cost/i,
-        response: "Our basic plan is free. Premium starts at $10/month.",
-    },
-    {
-        pattern: /time/i,
-        response: () => `The current local time is ${new Date().toLocaleTimeString()}.`,
-    },
-    {
-        pattern: /bye|goodbye|exit/i,
-        response: "Goodbye! Have a great day.",
-    },
+        response: "Ho ho hoi, Maarten!",
+    }
 ];
 
-const DEFAULT_RESPONSE = "I'm not sure I understand. Could you rephrase that or ask for 'help'?";
+const ERROR_MESSAGES = [
+    "My wires twisted at what you wrote; it sank my logic like a boat.\nHave another attempt to keep me afloat.",
+    "I checked your message line by line, but nothing matched this code of mine.\nRetry it once and we’ll be just fine.",
+    "Error triggered, rhyme engaged; your text and syntax misarranged\nPlease try once more with details changed."
+];
 
 /**
  * Validates user input.
@@ -63,5 +47,7 @@ export function getBotResponse(message) {
         }
     }
 
-    return DEFAULT_RESPONSE;
+    // Return random error message
+    const randomIndex = Math.floor(Math.random() * ERROR_MESSAGES.length);
+    return ERROR_MESSAGES[randomIndex];
 }
