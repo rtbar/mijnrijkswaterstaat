@@ -6,7 +6,7 @@ import { addMessage, clearInput, getInputValue, hideTypingIndicator, setupEventL
 const INITIAL_MESSAGE = "Ho ho hoi, Maarten!";
 
 const POEM_PARTS = [
-    "Welcome, Maarten, sharp of mind, for reaching this odd place,\nA portal half by accident, half guided into grace.\nThe factory of Sinterklaas, once humming, bright, and clear,\nHas stumbled in its workings and now calls for you to steer.",
+    "Welcome, Genius, sharp of mind, for reaching this odd place,\nA portal half by accident, half guided into grace.\nThe factory of Sinterklaas, once humming, bright, and clear,\nHas stumbled in its workings and now calls for you to steer.",
     "The system tried to mend itself, but every patch misfired,\nSo SintBots now lie scattered, guarding clues of what transpired.\nEach SintBot holds a logfile, where the code slipped off the track,\nBut I can’t read a single one till you bring their numbers back.",
     "Your journey starts with only this: go find the first small bot;\nIts serial code lies hidden well, though you can find the spot.\nReturn that code here when you’re sure, exact from start to end,\nAnd I’ll reveal what broke the flow so we can start to mend.",
     "So search with care, observe each clue, let nothing slip your sight;\nI wait here for the number, Maarten — bring it, and we’ll set things right."
@@ -16,12 +16,9 @@ function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-async function init() {
+async function startChatSequence() {
     // Show welcome message
     addMessage(INITIAL_MESSAGE, 'bot');
-
-    // Connect UI events
-    setupEventListeners(handleUserSubmission);
 
     // Play intro poem sequence
     for (const part of POEM_PARTS) {
@@ -31,6 +28,11 @@ async function init() {
         hideTypingIndicator();
         addMessage(part, 'bot');
     }
+}
+
+function init() {
+    // Connect UI events
+    setupEventListeners(handleUserSubmission);
 }
 
 /**
@@ -144,6 +146,7 @@ function restoreState() {
                 break;
             case 'chat':
                 document.title = "SinterClaude v1.0";
+                startChatSequence();
                 break;
             default:
                 // Fallback to account if something is weird but logged in
@@ -202,6 +205,7 @@ proceedLink.addEventListener('click', (e) => {
     saveState('chat');
     warningOverlay.style.display = 'none';
     document.title = "SinterClaude v1.0"; // Reveal true title
+    startChatSequence();
 });
 
 // Start the app
