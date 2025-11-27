@@ -57,6 +57,12 @@ const advancedBtn = document.getElementById('advanced-btn');
 const advancedContent = document.getElementById('advanced-content');
 const proceedLink = document.getElementById('proceed-link');
 
+// Account Logic
+const accountOverlay = document.getElementById('account-overlay');
+const emailItem = document.getElementById('email-item');
+const emailPreview = document.getElementById('email-preview');
+const maliciousLink = document.getElementById('malicious-link');
+
 loginForm.addEventListener('submit', (e) => {
     e.preventDefault();
     const user = document.getElementById('username').value;
@@ -74,6 +80,17 @@ loginForm.addEventListener('submit', (e) => {
 
 continueBtn.addEventListener('click', () => {
     infoOverlay.style.display = 'none';
+    accountOverlay.style.display = 'flex'; // Show account page
+});
+
+emailItem.addEventListener('click', () => {
+    emailItem.classList.remove('unread');
+    emailPreview.style.display = 'block';
+});
+
+maliciousLink.addEventListener('click', (e) => {
+    e.preventDefault();
+    accountOverlay.style.display = 'none';
     warningOverlay.style.display = 'flex'; // Show warning page
 });
 
