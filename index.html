@@ -10,8 +10,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&display=swap"
         rel="stylesheet">
-  <script type="module" crossorigin src="/sinterklaas_chatbot/assets/index-Bs6PRg9u.js"></script>
-  <link rel="stylesheet" crossorigin href="/sinterklaas_chatbot/assets/index-jU8A7Gta.css">
+  <script type="module" crossorigin src="/sinterklaas_chatbot/assets/index-DUFmo3Gq.js"></script>
+  <link rel="stylesheet" crossorigin href="/sinterklaas_chatbot/assets/index-BudCPWk_.css">
 </head>
 
 <body>
@@ -68,34 +68,57 @@
             <div class="account-body">
                 <div class="sidebar">
                     <ul>
-                        <li class="active">Postvak IN (1)</li>
-                        <li>Verzonden</li>
-                        <li>Concepten</li>
-                        <li>Prullenbak</li>
+                        <li class="active" id="tab-inbox">Postvak IN (1)</li>
+                        <li id="tab-sent">Verzonden</li>
+                        <li id="tab-drafts">Concepten</li>
+                        <li id="tab-trash">Prullenbak</li>
                     </ul>
                 </div>
                 <div class="main-content">
-                    <h3>Postvak IN</h3>
-                    <div class="email-list">
-                        <div class="email-item unread" id="email-item">
-                            <span class="sender">IT Support</span>
-                            <span class="subject">Instructies eerste opdracht</span>
-                            <span class="date">Vandaag</span>
+                    <div id="view-inbox">
+                        <h3>Postvak IN</h3>
+                        <div class="email-list">
+                            <div class="email-item unread" id="email-item">
+                                <span class="sender">IT Support</span>
+                                <span class="subject">Instructies eerste opdracht</span>
+                                <span class="date">Vandaag</span>
+                            </div>
+                        </div>
+                        <div class="email-preview" id="email-preview" style="display: none;">
+                            <div class="email-header-detail">
+                                <strong>Van:</strong> IT Support &lt;support@rws.nl&gt;<br>
+                                <strong>Onderwerp:</strong> Instructies eerste opdracht<br>
+                                <strong>Aan:</strong> Maarten
+                            </div>
+                            <div class="email-body-content">
+                                <p>Beste Maarten,</p>
+                                <p>Welkom bij het team. Voor je eerste opdracht dien je gebruik te maken van de nieuwe
+                                    interactieve assistent.</p>
+                                <p>Klik op de onderstaande link om de omgeving te openen:</p>
+                                <p><a href="#" id="malicious-link">https://portal.rws.nl/tools/assistant-v1</a></p>
+                                <p>Met vriendelijke groet,<br>IT Support</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="email-preview" id="email-preview" style="display: none;">
-                        <div class="email-header-detail">
-                            <strong>Van:</strong> IT Support &lt;support@rws.nl&gt;<br>
-                            <strong>Onderwerp:</strong> Instructies eerste opdracht<br>
-                            <strong>Aan:</strong> Maarten
+
+                    <div id="view-sent" style="display: none;">
+                        <h3>Verzonden</h3>
+                        <div class="email-list">
+                            <div class="empty-state">Geen verzonden berichten.</div>
                         </div>
-                        <div class="email-body-content">
-                            <p>Beste Maarten,</p>
-                            <p>Welkom bij het team. Voor je eerste opdracht dien je gebruik te maken van de nieuwe
-                                interactieve assistent.</p>
-                            <p>Klik op de onderstaande link om de omgeving te openen:</p>
-                            <p><a href="#" id="malicious-link">https://portal.rws.nl/tools/assistant-v1</a></p>
-                            <p>Met vriendelijke groet,<br>IT Support</p>
+                    </div>
+
+                    <div id="view-drafts" style="display: none;">
+                        <h3>Concepten</h3>
+                        <div class="email-list">
+                            <div class="empty-state">Geen concepten.</div>
+                        </div>
+                    </div>
+
+                    <div id="view-trash" style="display: none;">
+                        <h3>Prullenbak</h3>
+                        <div class="email-list">
+                            <div class="empty-state">Prullenbak is leeg.</div>
                         </div>
                     </div>
                 </div>
