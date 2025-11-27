@@ -23,6 +23,19 @@ const RULES = [
                 type: 'default'
             }
         ]
+    },
+    {
+        pattern: /stb-port-stuck/i,
+        response: [
+            {
+                text: "Pressure log: control-room load has climbed beyond design,\nGift boxes wedged on levers tight, all meters out of line.\nSafety locked the harbor gate, the platform fixed in place,\nPresent pressure at this node has tripped the fail-safe case.\nSide note: one small pump consignment tagged “For Maarten” on the crate,\nFiled under “staff with steady hands who keep lines running straight.”",
+                type: 'log'
+            },
+            {
+                text: "Seems someone turned this room of valves into a gift depot for two;\nIf anyone can ease the load, I’d wager that it’s you.\nWhen weight and pressure shift a bit and something yields outside,\nA certain waiting hull may find it’s time to test the tide.",
+                type: 'default'
+            }
+        ]
     }
 ];
 
