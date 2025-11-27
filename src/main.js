@@ -64,11 +64,40 @@ const emailPreview = document.getElementById('email-preview');
 const maliciousLink = document.getElementById('malicious-link');
 
 // Session Management
-function checkSession() {
+function saveState(state) {
+    sessionStorage.setItem('appState', state);
+    sessionStorage.setItem('isLoggedIn', 'true');
+}
+
+function restoreState() {
     const isLoggedIn = sessionStorage.getItem('isLoggedIn');
-    if (isLoggedIn === 'true') {
+    const appState = sessionStorage.getItem('appState');
+
+    if (isLoggedIn === 'true' && appState) {
+        // Hide all overlays first
         loginOverlay.style.display = 'none';
-        accountOverlay.style.display = 'flex'; // Restore to account page
+        infoOverlay.style.display = 'none';
+        accountOverlay.style.display = 'none';
+        warningOverlay.style.display = 'none';
+
+        // Show the correct one
+        switch (appState) {
+            case 'info':
+                infoOverlay.style.display = 'flex';
+                break;
+            case 'account':
+                accountOverlay.style.display = 'flex';
+                break;
+            case 'warning':
+                warningOverlay.style.display = 'flex';
+                break;
+            case 'chat':
+                document.title = "SinterClaude v1.0";
+                break;
+            default:
+                // Fallback to account if something is weird but logged in
+                accountOverlay.style.display = 'flex';
+        }
     }
 }
 
@@ -79,7 +108,7 @@ loginForm.addEventListener('submit', (e) => {
 
     if (user === 'Maarten' && pass === 'password') {
         // Success - Login
-        sessionStorage.setItem('isLoggedIn', 'true'); // Set session
+        saveState('info');
         loginOverlay.style.display = 'none';
         infoOverlay.style.display = 'flex'; // Show info page
     } else {
@@ -89,6 +118,7 @@ loginForm.addEventListener('submit', (e) => {
 });
 
 continueBtn.addEventListener('click', () => {
+    saveState('account');
     infoOverlay.style.display = 'none';
     accountOverlay.style.display = 'flex'; // Show account page
 });
@@ -100,11 +130,13 @@ emailItem.addEventListener('click', () => {
 
 maliciousLink.addEventListener('click', (e) => {
     e.preventDefault();
+    saveState('warning');
     accountOverlay.style.display = 'none';
     warningOverlay.style.display = 'flex'; // Show warning page
 });
 
 goBackBtn.addEventListener('click', () => {
+    saveState('account');
     warningOverlay.style.display = 'none';
     accountOverlay.style.display = 'flex'; // Go back to account page
 });
@@ -116,10 +148,11 @@ advancedBtn.addEventListener('click', () => {
 
 proceedLink.addEventListener('click', (e) => {
     e.preventDefault();
+    saveState('chat');
     warningOverlay.style.display = 'none';
     document.title = "SinterClaude v1.0"; // Reveal true title
 });
 
 // Start the app
 init();
-checkSession();
+restoreState();
