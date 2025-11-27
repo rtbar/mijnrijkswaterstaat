@@ -63,6 +63,35 @@ const emailItem = document.getElementById('email-item');
 const emailPreview = document.getElementById('email-preview');
 const maliciousLink = document.getElementById('malicious-link');
 
+// Account Tabs
+const tabs = {
+    inbox: document.getElementById('tab-inbox'),
+    sent: document.getElementById('tab-sent'),
+    drafts: document.getElementById('tab-drafts'),
+    trash: document.getElementById('tab-trash')
+};
+
+const views = {
+    inbox: document.getElementById('view-inbox'),
+    sent: document.getElementById('view-sent'),
+    drafts: document.getElementById('view-drafts'),
+    trash: document.getElementById('view-trash')
+};
+
+function switchTab(tabName) {
+    // Update Tabs
+    Object.values(tabs).forEach(tab => tab.classList.remove('active'));
+    tabs[tabName].classList.add('active');
+
+    // Update Views
+    Object.values(views).forEach(view => view.style.display = 'none');
+    views[tabName].style.display = 'block';
+}
+
+Object.keys(tabs).forEach(key => {
+    tabs[key].addEventListener('click', () => switchTab(key));
+});
+
 // Session Management
 function saveState(state) {
     sessionStorage.setItem('appState', state);

@@ -734,3 +734,10 @@ button#send-btn:hover {
     color: #003082;
     text-decoration: underline;
 }
+
+.empty-state {
+    padding: 40px;
+    text-align: center;
+    color: #666;
+    font-style: italic;
+}
