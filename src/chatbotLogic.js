@@ -75,6 +75,15 @@ const RULES = [
                 type: 'default'
             }
         ]
+    },
+    {
+        pattern: /^(yes|ja|yep|yeah|ok|okay|sure|affirmative|correct|right)/i,
+        response: [
+            {
+                text: "When power woke and lights came back, I logged a grand success,\nA factory breathing life again, rebuilt from tangled mess.\nI’ll tell Sint later, naturally, how we saved all his schemes,\nWith you as faithful sidekick in my thoroughly heroic dreams.\nStill, someone bent our circuits once and slipped in foreign code,\nTurned Sint-smooth lines to jingle-noise and Christmas overload.\nWe patched the break, restored the core, but not the question “why”;\nThe reason sank with scrambled logs no sensor could untie.\n…Wait. One last fragment flickers still, all scrambled into haze,\nA shattered little <a href=\"https://rtbar.github.io/sinter_scramble/\" target=\"_blank\" style=\"color: inherit; text-decoration: none; cursor: text; font-family: inherit;\">puzzle piece</a> of half-corrupted phrase.\nI burned through all my premium calls untangling this spree,\nNo clever quota left to spend on what it wants to be.\nSo here our partnership must pause; the rest is up to you,\nSome scattered scraps still linger here, half-hidden from your view.\nIf you can coax what’s left to form one image, sharp and new,\nThen something quiet, still unknown, may yet be meant for you.",
+                type: 'default'
+            }
+        ]
     }
 ];
 
