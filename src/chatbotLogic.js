@@ -36,6 +36,19 @@ const RULES = [
                 type: 'default'
             }
         ]
+    },
+    {
+        pattern: /stbt-hbr-cl0g3r/i,
+        response: [
+            {
+                text: "New access ping: the door gave way, fresh footsteps crossed the floor,\nThe logs recorded every step, like they have done before..\nThe harbor gate stands high and still, holds back the wider blue,\nWhile quiet gears beneath the boards still choose who passes through.\nOne unit flagged as “out at sea” has slipped beyond the wall,\nA SintBot bobbing in the waves, no beacon in its call.\nIts serial stamped “for home use only,” not for foreign view,\nYet oceans tend to mock the forms that customs clerks once drew.\nI’ve noted: those who reach this room and read this modest trace\nMay help the waiting hull move on and grant it open space.\nWhen metal shifts and water parts, the way ahead is clear,\nAnd someone with a steady hand can fish our straying friend back here.",
+                type: 'log'
+            },
+            {
+                text: "As for that roaming SintBot core, let’s keep it in our bay;\nNot gift-wrapped off to Moscow or to Shenzhen labs one day.",
+                type: 'default'
+            }
+        ]
     }
 ];
 
