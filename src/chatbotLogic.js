@@ -49,6 +49,19 @@ const RULES = [
                 type: 'default'
             }
         ]
+    },
+    {
+        pattern: /stbt-red-ht404/i,
+        response: [
+            {
+                text: "I wear three red coats at once, one body, triple name;\nThree harbours on one spinning world all claim the same old fame.\nFirst: a sunlit southern quay, with horses, tiles and spray;\nThey swear I sail from orange winds that send their gifts this way.\nSecond: where the maps run out and snow replaces shore;\nReindeer scrape the frozen night the compass calls “no more.”\nThird: old stones above warm seas where “Nicholas” was said;\nA bishop walked those eastern streets before my hull turned red.\nThree coasts, one globe, three stopping points; trace them on the sphere,\nSet sun, and snow, and ancient walls… let hidden numbers appear.\nThose digits wake the sleeping core that hums in darkness here.",
+                type: 'log'
+            },
+            {
+                text: "Well, that was not a normal log, more fever-dream than file,\nA SintBot playing Sinterklaas in three lives all the while.\nThree voices on one circuit board, all chasing one same role,\nThree places on a spinning globe that tugged on one split soul.\n\nStill, if three homes keep circling back in all this tangled lore,\nTheir map might hide the numbers that can wake the factory core.",
+                type: 'default'
+            }
+        ]
     }
 ];
 
