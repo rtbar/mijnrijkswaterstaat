@@ -62,6 +62,19 @@ const RULES = [
                 type: 'default'
             }
         ]
+    },
+    {
+        pattern: /stbt-bl4ck-0u7/i,
+        response: [
+            {
+                text: "At core-control this unit logged: breach at access tier,\nManual override engaged by source that’s not registered here.\nNative SINT_MODE halted cold; new branch spun up instead:\nXMAS_MODE = ENABLED now, cringy carols overhead.\nLoad was driven down to zero, systems told “stand by,”\nPower held in safe-idle while this patch just slipped by.\nLock now waits on human hands to clear the foreign code,\nThen bring the sleeping heart online and let the belts explode.",
+                type: 'log'
+            },
+            {
+                text: "So that horrid jingle blare is not just bad décor,\nIt flags a crooked Christmas patch inside the working core.\nSwitch off this carol-spewing mode, let Sint reclaim his throne,\nThen bring the sleeping power back to do its work alone.\nIf gauges rise and windows glow like they have done before,\nTell me softly, Maarten: are the lights back on once more?",
+                type: 'default'
+            }
+        ]
     }
 ];
 
