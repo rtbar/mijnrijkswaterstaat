@@ -2,6 +2,8 @@
  * Configuration for chatbot responses.
  * Rules are checked in order.
  */
+let blackoutPoemShown = false;
+
 const RULES = [
     {
         pattern: /^(hi|hello|hey|greetings)/i,
@@ -65,6 +67,7 @@ const RULES = [
     },
     {
         pattern: /stbt-bl4ck-0u7/i,
+        onMatch: () => { blackoutPoemShown = true; },
         response: [
             {
                 text: "At core-control this unit logged: breach at access tier,\nManual override engaged by source that’s not registered here.\nNative SINT_MODE halted cold; new branch spun up instead:\nXMAS_MODE = ENABLED now, cringy carols overhead.\nLoad was driven down to zero, systems told “stand by,”\nPower held in safe-idle while this patch just slipped by.\nLock now waits on human hands to clear the foreign code,\nThen bring the sleeping heart online and let the belts explode.",
@@ -78,6 +81,7 @@ const RULES = [
     },
     {
         pattern: /^(yes|ja|yep|yeah|ok|okay|sure|affirmative|correct|right)/i,
+        condition: () => blackoutPoemShown,
         response: [
             {
                 text: "When power woke and lights came back, I logged a grand success,\nA factory breathing life again, rebuilt from tangled mess.\nI’ll tell Sint later, naturally, how we saved all his schemes,\nWith you as faithful sidekick in my thoroughly heroic dreams.\nStill, someone bent our circuits once and slipped in foreign code,\nTurned Sint-smooth lines to jingle-noise and Christmas overload.\nWe patched the break, restored the core, but not the question “why”;\nThe reason sank with scrambled logs no sensor could untie.\n…Wait. One last fragment flickers still, all scrambled into haze,\nA shattered little <a href=\"https://rtbar.github.io/sinter_scramble/\" target=\"_blank\" style=\"color: inherit; text-decoration: none; cursor: text; font-family: inherit;\">puzzle piece</a> of half-corrupted phrase.\nI burned through all my premium calls untangling this spree,\nNo clever quota left to spend on what it wants to be.\nSo here our partnership must pause; the rest is up to you,\nSome scattered scraps still linger here, half-hidden from your view.\nIf you can coax what’s left to form one image, sharp and new,\nThen something quiet, still unknown, may yet be meant for you.",
@@ -118,6 +122,16 @@ export function getBotResponse(message) {
 
     for (const rule of RULES) {
         if (normalized.match(rule.pattern)) {
+            // Check condition if present
+            if (rule.condition && !rule.condition()) {
+                continue;
+            }
+
+            // Execute side effect if present
+            if (rule.onMatch) {
+                rule.onMatch();
+            }
+
             // Response can be a string or a function for dynamic data (like time)
             return typeof rule.response === 'function'
                 ? rule.response()
