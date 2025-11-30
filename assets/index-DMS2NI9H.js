@@ -1,4 +1,4 @@
-(function(){const t=document.createElement("link").relList;if(t&&t.supports&&t.supports("modulepreload"))return;for(const s of document.querySelectorAll('link[rel="modulepreload"]'))n(s);new MutationObserver(s=>{for(const a of s)if(a.type==="childList")for(const f of a.addedNodes)f.tagName==="LINK"&&f.rel==="modulepreload"&&n(f)}).observe(document,{childList:!0,subtree:!0});function o(s){const a={};return s.integrity&&(a.integrity=s.integrity),s.referrerPolicy&&(a.referrerPolicy=s.referrerPolicy),s.crossOrigin==="use-credentials"?a.credentials="include":s.crossOrigin==="anonymous"?a.credentials="omit":a.credentials="same-origin",a}function n(s){if(s.ep)return;s.ep=!0;const a=o(s);fetch(s.href,a)}})();let w=!1;const M=[{pattern:/^(hi|hello|hey|greetings)/i,response:"Ho ho hoi, Maarten!"},{pattern:/stbt-c4pt-ainai/i,response:[{text:`Maarten, scherp gevonden! The code you traced with care.
+(function(){const t=document.createElement("link").relList;if(t&&t.supports&&t.supports("modulepreload"))return;for(const s of document.querySelectorAll('link[rel="modulepreload"]'))n(s);new MutationObserver(s=>{for(const a of s)if(a.type==="childList")for(const f of a.addedNodes)f.tagName==="LINK"&&f.rel==="modulepreload"&&n(f)}).observe(document,{childList:!0,subtree:!0});function o(s){const a={};return s.integrity&&(a.integrity=s.integrity),s.referrerPolicy&&(a.referrerPolicy=s.referrerPolicy),s.crossOrigin==="use-credentials"?a.credentials="include":s.crossOrigin==="anonymous"?a.credentials="omit":a.credentials="same-origin",a}function n(s){if(s.ep)return;s.ep=!0;const a=o(s);fetch(s.href,a)}})();let w=!1;const M=[{pattern:/^(hi|hello|hey|greetings)/i,response:"Ho ho hoi, Maarten!"},{pattern:/stbt-cptn-a1a1/i,response:[{text:`Maarten, scherp gevonden! The code you traced with care.
 What joy this bot is living, not rusting in despair.
 Its heartbeat dim but present, its storage faint but true,
 And in its logs were found these rules, now read aloud to you:`,type:"default"},{text:`No breaking, bending, forcing parts; keep every piece intact,
@@ -12,7 +12,7 @@ So go inspect its hidden shell; the job’s been passed to you.
 These bots are kept behind locked doors, it’s protocol, you see,
 And that means somewhere on dry land there lies a hidden key.
 You’re sharp enough to find it, Maarten, truly, that I trust.
-So track it down, unlock the door, and free the bot you must.`,type:"default"}]},{pattern:/stb-port-stuck/i,response:[{text:`Pressure log: control-room load has climbed beyond design,
+So track it down, unlock the door, and free the bot you must.`,type:"default"}]},{pattern:/stbt-p0rt-s7uc/i,response:[{text:`Pressure log: control-room load has climbed beyond design,
 Gift boxes wedged on levers tight, all meters out of line.
 Safety locked the harbor gate, the platform fixed in place,
 Present pressure at this node has tripped the fail-safe case.
@@ -20,7 +20,7 @@ Side note: one small pump consignment tagged “For Maarten” on the crate,
 Filed under “staff with steady hands who keep lines running straight.”`,type:"log"},{text:`Seems someone turned this room of valves into a gift depot for two;
 If anyone can ease the load, I’d wager that it’s you.
 When weight and pressure shift a bit and something yields outside,
-A certain waiting hull may find it’s time to test the tide.`,type:"default"}]},{pattern:/stbt-hbr-cl0g3r/i,response:[{text:`New access ping: the door gave way, fresh footsteps crossed the floor,
+A certain waiting hull may find it’s time to test the tide.`,type:"default"}]},{pattern:/stbt-h4br-cl0g/i,response:[{text:`New access ping: the door gave way, fresh footsteps crossed the floor,
 The logs recorded every step, like they have done before..
 The harbor gate stands high and still, holds back the wider blue,
 While quiet gears beneath the boards still choose who passes through.
@@ -32,7 +32,7 @@ I’ve noted: those who reach this room and read this modest trace
 May help the waiting hull move on and grant it open space.
 When metal shifts and water parts, the way ahead is clear,
 And someone with a steady hand can fish our straying friend back here.`,type:"log"},{text:`As for that roaming SintBot core, let’s keep it in our bay;
-Not gift-wrapped off to Moscow or to Shenzhen labs one day.`,type:"default"}]},{pattern:/stbt-red-ht404/i,response:[{text:`I wear three red coats at once, one body, triple name;
+Not gift-wrapped off to Moscow or to Shenzhen labs one day.`,type:"default"}]},{pattern:/stbt-r3d-ht404/i,response:[{text:`I wear three red coats at once, one body, triple name;
 Three harbours on one spinning world all claim the same old fame.
 First: a sunlit southern quay, with horses, tiles and spray;
 They swear I sail from orange winds that send their gifts this way.
@@ -48,7 +48,7 @@ Three voices on one circuit board, all chasing one same role,
 Three places on a spinning globe that tugged on one split soul.
 
 Still, if three homes keep circling back in all this tangled lore,
-Their map might hide the numbers that can wake the factory core.`,type:"default"}]},{pattern:/stbt-bl4ck-0u7/i,onMatch:()=>{w=!0},response:[{text:`At core-control this unit logged: breach at access tier,
+Their map might hide the numbers that can wake the factory core.`,type:"default"}]},{pattern:/stbt-bl4k-0u7/i,onMatch:()=>{w=!0},response:[{text:`At core-control this unit logged: breach at access tier,
 Manual override engaged by source that’s not registered here.
 Native SINT_MODE halted cold; new branch spun up instead:
 XMAS_MODE = ENABLED now, cringy carols overhead.
