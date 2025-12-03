@@ -40,7 +40,7 @@ Second: where the maps run out and snow replaces shore;
 Reindeer scrape the frozen night the compass calls “no more.”
 Third: old stones above warm seas where “Nicholas” was said;
 A bishop walked those eastern streets before my hull turned red.
-Three coasts, one globe, three stopping points; <a href="https://rtbar.github.io/earth_animation/" target="_blank" style="color: #11640b; text-decoration: none; cursor: text; font-family: inherit;">trace them on the sphere,</a>
+Three coasts, one globe, three stopping points; <a href="https://rtbar.github.io/earth_animation/" target="_blank" style="color: #1c9113; text-decoration: none; cursor: text; font-family: inherit;">trace them on the sphere,</a>
 Set sun, and snow, and ancient walls… let hidden numbers appear.
 Those digits wake the sleeping core that hums in darkness here.`,type:"log"},{text:`Well, that was not a normal log, more fever-dream than file,
 A SintBot playing Sinterklaas in three lives all the while.
